@@ -51,6 +51,7 @@ class PaypalButton extends React.Component {
             return actions.payment.execute().then((payment_data) => {
                 // console.log(`payment_data: ${JSON.stringify(payment_data, null, 1)}`)
                 const payment = Object.assign({}, this.props.payment);
+                payment.orderID = data.orderID.split("-")[1];
                 payment.paid = true;
                 payment.cancelled = false;
                 payment.payerID = data.payerID;

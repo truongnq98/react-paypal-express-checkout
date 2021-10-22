@@ -1,15 +1,15 @@
-# react-paypal-express-checkout
+# react-paypal-bs
 React component that renders Paypal's express check out button
 
 ## Install
 
 ```bash
-npm install --save react-paypal-express-checkout
+npm install --save react-paypal-bs
 ```
 
 or
  ```bash
-yarn add react-paypal-express-checkout
+yarn add react-paypal-bs
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ yarn add react-paypal-express-checkout
 ## Simplest Example (with minimum set of parameters, this will use the "sandbox" environment)
 
 ```javascript
-import PaypalExpressBtn from 'react-paypal-express-checkout';
+import PaypalExpressBtn from 'react-paypal-bs';
 
 export default class MyApp extends React.Component {
 	render() {
@@ -36,7 +36,7 @@ export default class MyApp extends React.Component {
 
 ```javascript
 import React from 'react';
-import PaypalExpressBtn from 'react-paypal-express-checkout';
+import PaypalExpressBtn from 'react-paypal-bs';
 
 export default class MyApp extends React.Component {
     render() {
