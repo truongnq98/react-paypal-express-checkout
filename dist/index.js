@@ -1,7 +1,7 @@
 (function (global, factory) {
-    if (typeof define === "function" && define.amd) {
+    if (typeof define === 'function' && define.amd) {
         define(['exports', 'react', 'react-dom', 'react-async-script-loader', 'prop-types'], factory);
-    } else if (typeof exports !== "undefined") {
+    } else if (typeof exports !== 'undefined') {
         factory(exports, require('react'), require('react-dom'), require('react-async-script-loader'), require('prop-types'));
     } else {
         var mod = {
@@ -13,7 +13,7 @@
 })(this, function (exports, _react, _reactDom, _reactAsyncScriptLoader, _propTypes) {
     'use strict';
 
-    Object.defineProperty(exports, "__esModule", {
+    Object.defineProperty(exports, '__esModule', {
         value: true
     });
 
@@ -33,7 +33,7 @@
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
-            throw new TypeError("Cannot call a class as a function");
+            throw new TypeError('Cannot call a class as a function');
         }
     }
 
@@ -43,7 +43,7 @@
                 var descriptor = props[i];
                 descriptor.enumerable = descriptor.enumerable || false;
                 descriptor.configurable = true;
-                if ("value" in descriptor) descriptor.writable = true;
+                if ('value' in descriptor) descriptor.writable = true;
                 Object.defineProperty(target, descriptor.key, descriptor);
             }
         }
@@ -57,15 +57,15 @@
 
     function _possibleConstructorReturn(self, call) {
         if (!self) {
-            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            throw new ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
         }
 
-        return call && (typeof call === "object" || typeof call === "function") ? call : self;
+        return call && (typeof call === 'object' || typeof call === 'function') ? call : self;
     }
 
     function _inherits(subClass, superClass) {
-        if (typeof superClass !== "function" && superClass !== null) {
-            throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+        if (typeof superClass !== 'function' && superClass !== null) {
+            throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
         }
 
         subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -143,6 +143,7 @@
                     return actions.payment.execute().then(function (payment_data) {
                         // console.log(`payment_data: ${JSON.stringify(payment_data, null, 1)}`)
                         var payment = Object.assign({}, _this2.props.payment);
+                        payment.orderID = data.orderID.split('-')[1];
                         payment.paid = true;
                         payment.cancelled = false;
                         payment.payerID = data.payerID;

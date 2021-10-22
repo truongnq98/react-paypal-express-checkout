@@ -1,6 +1,6 @@
 {
   "name": "react-paypal-bs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React component that renders Paypal's express check out button",
   "repository": {
     "type": "git",
