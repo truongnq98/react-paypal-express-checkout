@@ -129,6 +129,9 @@
                 var _this2 = this;
 
                 var payment = function payment() {
+                    if (_this2.props.onClickButton) {
+                        _this2.props.onClickButton()
+                    }
                     return paypal.rest.payment.create(_this2.props.env, _this2.props.client, Object.assign({
                         transactions: [{ amount: { total: _this2.props.total, currency: _this2.props.currency } }]
                     }, _this2.props.paymentOptions), {
